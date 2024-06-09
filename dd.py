@@ -9,7 +9,10 @@ with open(image_path, 'rb') as f:
     img_bytes = f.read()
 
 # 使用 ddddocr 进行识别
-result = ocr.classification(img_bytes)
+result = ocr.classification(img_bytes, probability=True)
 
-# 打印识别结果
-print("识别结果:", result)
+s = ""
+for i in result['probability']:
+    s += result['charsets'][i.index(max(i))]
+
+print(s)
