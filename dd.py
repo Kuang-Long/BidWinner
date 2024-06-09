@@ -14,5 +14,5 @@ result = ocr.classification(img_bytes, probability=True)
 s = ""
 for i in result['probability']:
     s += result['charsets'][i.index(max(i))]
-
+############################
 print(s)
