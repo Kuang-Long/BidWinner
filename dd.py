@@ -1,7 +1,7 @@
 import ddddocr
 
 # 创建一个 OCR 识别器对象
-ocr = ddddocr.DdddOcr()
+ocr = ddddocr.DdddOcr(show_ad=False)
 ocr.set_ranges("0123456789")
 # 读取要识别的图像文件
 image_path = "C:/Users/IT_manager/Desktop/1.jpg"
